@@ -1,0 +1,145 @@
+/* Reset default margin & padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to bottom, #73c9fe, #000000);
+    font-family: Arial, sans-serif;
+}
+
+/* Box container (Increased size) */
+.box {
+    width: 500px;  /* Increased width */
+    padding: 30px; /* Increased padding */
+    background-color: black;
+    border-radius: 15px;
+    text-align: center;
+    position: relative;
+}
+
+/* Heading (Increased font size) */
+h1 {
+    font-size: 28px; /* Bigger text */
+    color: rgb(65, 206, 238);
+}
+
+/* Input and button container */
+.input-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+/* Input field (Bigger size) */
+#task {
+    flex: 1; /* Takes remaining space */
+    padding: 12px; /* Increased padding */
+    font-size: 18px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+}
+
+/* Error message */
+#error-msg {
+    color: red;
+    font-size: 16px;
+    margin-top: 5px;
+    display: none; /* Initially hidden */
+    text-align: left;
+}
+
+/* Add Task Button (Bigger but not full width) */
+#addTaskBtn {
+    width: 150px; /* Fixed width */
+    background-color: rgb(65, 206, 238);
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 18px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+#addTaskBtn:hover {
+    background-color: rgb(50, 150, 200);
+}
+
+/* Task List (Bigger font and spacing) */
+.innerdiv {
+    margin-top: 20px;
+    text-align: left;
+    max-height: 300px; /* Increased height */
+    overflow-y: auto;
+    border: 2px solid #444;
+    padding: 15px;
+}
+
+/* Task List Items (Bigger spacing & font) */
+li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #222;
+    padding: 15px; /* Increased padding */
+    margin-top: 10px; /* Increased margin */
+    border-radius: 8px;
+    font-size: 18px;
+    color: white;
+}
+
+/* Checkbox styling (Bigger circle) */
+.check {
+    width: 25px;  /* Increased size */
+    height: 25px; /* Increased size */
+    border-radius: 50%;
+    appearance: none;
+    border: 3px solid white;
+    cursor: pointer;
+    position: relative;
+}
+
+/* Green tick effect */
+.check:checked {
+    background-color: green;
+    border-color: green;
+}
+
+.check:checked::after {
+    content: "✔";
+    font-size: 18px;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Completed Task */
+.completed {
+    text-decoration: line-through;
+    color: gray;
+}
+
+/* Delete Button (Bigger size) */
+.delete {
+    background: red;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.delete:hover {
+    background: darkred;
+}
